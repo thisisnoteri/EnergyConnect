@@ -3,9 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EnergyConnect</title>
+    <title>Energy FM 106.3</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+        }
+
+        .header {
+            background: #1C5186;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            height: 50px;
+        }
+        .menu-icon {
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        /*Banner*/
+        .banner {
+            background: #1C5186;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            min-height: 450px;
+
+        }
+        .banner h2 {
+            margin-top: 10px;
+        }
+ 
+        /* Featured Programs */
+        .section-title {
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .programs {
+            padding: 10px 20px;
+        }
+
+        .program-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+
+        .program-header {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <a href = "programs.html">Programs</a>
+    <!-- HEADER -->
+    <div class="header">
+        <a href = "index.html">
+            <img src = "images/logo.png" alt = "Energy FM 106.3 Naga Logo" class = "logo">
+        </a>
+        <div class="menu-icon">&#9776;</div>
+    </div>
+
+    <!-- BANNER -->
+    <div class="banner">
+        <h3>BASTA ENERGY, NUMBER 1 PIRMI!</h3>
+
+        <div class="hosts">
+            <img src="EEFDJs.png">
+        </div>
+
+        <div class="listen">
+            <h4>LISTEN LIVE HERE 🎧</h4>
+            <p>On Air: Troye Sivan – Youth</p>
+        </div>
+    </div>
+
+    <!-- FEATURED PROGRAMS -->
+    <div class="section-title">FEATURED PROGRAMS</div>
+
+    <div class="programs">
+        <div class="program-card">
+            <div class="program-header">GOOD MORNING ENERGY | MON – SAT</div>
+            <div>Time: 12:00 AM – 5:00 AM</div>
+            <div>Music Only 🎧</div>
+        </div>
+
+        <div class="program-card">
+            <div class="program-header">ENERGY HEADLINES | MON – FRI</div>
+            <div>Time: 5:00 AM – 7:00 AM</div>
+            <div>DJ MAKSIG & PAPA GATS 🎧</div>
+        </div>
+    </div>
+
 </body>
 </html>
