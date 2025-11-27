@@ -1,3 +1,68 @@
+.header-home {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 30px;
+    margin-left: 20px;
+    top: 3px;
+}
+
+/* .header-home img {            
+    height: 90px;
+    margin-top: 10px;
+    position: absolute;
+    top: 20px;
+} */
+
+.banner {
+    background-image: url("images/header_home.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+    min-height: 250px;
+}
+
+.banner h2 {
+    margin-top: 0 0 20px 0;
+    color: yellow;
+    font-size: 30px;
+    padding-bottom: 15px;
+}
+
+.hosts-home img {
+    height: 270px;
+    margin: 20px 0;
+}
+
+.section-home {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.programs {
+    padding: 10px 20px;
+}
+
+.program-header {
+    font-weight: bold;
+}
+
+.program-card-home {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Programs */
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +81,7 @@
     position: absolute;   
     top: 15px;           
     left: 15px;           
-    height: 65px;         
+    height: 75px;         
     width: auto;          
     z-index: 10;          
 }

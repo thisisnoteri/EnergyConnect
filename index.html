@@ -1,84 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EnergyConnect</title>
+    <title>Energy FM 106.3</title>
+    <link rel="stylesheet" href="styles.css">
+
     <style>
         body {
-            font-family: Arial;
+            margin: 0;
+            font-family: Arial, sans-serif;
             background: #f4f4f4;
-        }
-
-        .header {
-            background: #1C5186;
-            padding: 10px 20px;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .header img {
-            height: 50px;
-        }
-        .menu-icon {
-            font-size: 25px;
-            cursor: pointer;
-        }
-
-        /*Banner*/
-        .banner {
-            background: #1C5186;
-            padding: 20px;
-            text-align: center;
-            color: white;
-            min-height: 450px;
-
-        }
-        .banner h2 {
-            margin-top: 10px;
-        }
- 
-        /* Featured Programs */
-        .section-title {
-            padding: 20px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .programs {
-            padding: 10px 20px;
-        }
-
-        .program-card {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-        }
-
-        .program-header {
-            font-weight: bold;
+            width: 100%;
         }
     </style>
 </head>
+
 <body>
-    <a href = "programs.html">Programs</a>
-    <!-- HEADER -->
-    <div class="header">
+
+    <div class="header-home">
         <a href = "index.html">
-            <img src = "images/logo.png" alt = "Energy FM 106.3 Naga Logo" class = "logo">
+            <img src="images/logo.png" alt="Energy FM 106.3 Naga Logo" class="logo">
         </a>
-        <div class="menu-icon">&#9776;</div>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <div class="dropdown-menu">
+            <a href="about.html">About</a>
+            <a href="profiles.html">Profiles</a>
+            <a href="programs.html">Programs</a>
+            <a href="stream.html">Stream</a>
+            <a href="news.html">News</a>
+        </div>
     </div>
 
-    <!-- BANNER -->
     <div class="banner">
-        <h3>BASTA ENERGY, NUMBER 1 PIRMI!</h3>
+        <h2>BASTA ENERGY, NUMBER 1 PIRMI!</h2>
 
-        <div class="hosts">
-            <img src="EEFDJs.png">
+        <div class="hosts-home">
+            <img style="width: 850px; height: auto;" src="images/EFDJs.png">
         </div>
 
         <div class="listen">
@@ -87,22 +49,32 @@
         </div>
     </div>
 
-    <!-- FEATURED PROGRAMS -->
-    <div class="section-title">FEATURED PROGRAMS</div>
+    <div class="section-home">FEATURED PROGRAMS</div>
 
     <div class="programs">
-        <div class="program-card">
+
+        <div class="program-card-home">
             <div class="program-header">GOOD MORNING ENERGY | MON – SAT</div>
             <div>Time: 12:00 AM – 5:00 AM</div>
             <div>Music Only 🎧</div>
         </div>
 
+    </div>
+
+    <div class="section-title">LATEST NEWS UPDATES</div>
+
+    <div class="programs">
         <div class="program-card">
-            <div class="program-header">ENERGY HEADLINES | MON – FRI</div>
-            <div>Time: 5:00 AM – 7:00 AM</div>
-            <div>DJ MAKSIG & PAPA GATS 🎧</div>
+            <div class="program-header">BAGYONG UWAN 2025</div>
+            <div>Inquirer News | November 8, 2025</div>
+            <div>By: Keith Clores</div>
         </div>
     </div>
 
 </body>
+
+    <div class = "footer">
+        <footer>Privacy Policy | Energy FM © 2010</footer>
+    </div>
+
 </html>
