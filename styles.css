@@ -186,3 +186,49 @@
         margin-top: 10px;
     }
 }
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    font-size: 32px;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 30px;
+    position: absolute;
+    right: 0%;
+    top: 20px;
+    color: white;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    width: 150px;
+    background: white;
+    border-radius: 5px;
+    padding: 10px 0;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 99;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 501;
+}
+
+.dropdown-menu a:hover {
+    background: #e0eefc;
+}
+
+#menu-toggle:checked~.dropdown-menu {
+    display: block;
+}
