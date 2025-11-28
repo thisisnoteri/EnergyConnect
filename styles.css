@@ -60,6 +60,46 @@
     box-shadow: 0 10px 20px -5px rgba(0,0,0,0.4);
 }
 
+/* Profiles */
+.header-profiles {
+    background: url('images/profiles-main.png') center/cover no-repeat;
+    height: 650px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.hosts-profile img {
+    height: 270px;
+    margin: 20px 0;
+}
+
+.banner-profiles {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+    min-height: 250px;
+}
+
+.description {
+    margin-bottom: 100px;
+}
+
+.description h1 {
+    text-align: center; 
+    padding-top: 50px;
+    font-size: 50px;
+}
+
+.description p {
+    text-align: center;
+    padding: 45px 290px;
+    font-weight: 350;
+}
+
 /* Programs */
 * {
     margin: 0;
