@@ -101,19 +101,19 @@
     font-size: 18px;
 }
 
-section {
+.profiles-page section {
     display: none;
 }
 
-section:target {
+.profiles-page section:target {
     display: block;
 }
 
 /* Right-side button in banner-profiles */
-.banner-profiles .right-button {
+.banner-profiles .right-button, .banner-profiles .right-button-main {
     position: absolute;
     top: 50%;          /* vertically center */
-    right: 30px;       /* distance from the right edge */
+    right: 365px;       /* distance from the right edge */
     transform: translateY(-50%);
     padding: 12px 25px;
     background-color: #FFEC40;
@@ -126,7 +126,12 @@ section:target {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.banner-profiles .right-button:hover, .banner-profiles .left-button:hover {
+.banner-profiles .right-button-main {
+    right: 60px;
+}
+
+.banner-profiles .right-button:hover, .banner-profiles .left-button:hover, 
+.banner-profiles .right-button-main:hover {
     background-color: #FFD700;
 }
 
@@ -134,7 +139,7 @@ section:target {
 .banner-profiles .left-button {
     position: absolute;
     top: 50%;          /* vertically center */
-    left: 30px;       /* distance from the right edge */
+    left: 360px;       /* distance from the right edge */
     transform: translateY(-50%);
     padding: 12px 25px;
     background-color: #FFEC40;
@@ -147,8 +152,12 @@ section:target {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-body:not(:has(section:target)) #main {
+.profiles-page:not(:has(section:target)) #main, #main-description {
     display: block;
+}
+
+.hosts-profile section a {
+    text-decoration: none;
 }
 
 /* Programs */
