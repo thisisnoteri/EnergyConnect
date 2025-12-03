@@ -68,32 +68,40 @@
     </div>
 
     <script>
-  fetch('http://localhost:5500/data')
-    .then(response => response.json())
-    .then(data => {
-      const programList = document.querySelector('.program-list');
-      programList.innerHTML = ''; // clear existing content
+  // Fetch programs and day types concurrently
+  Promise.all([
+    fetch('http://localhost:5500/programs').then(res => res.json()),
+    fetch('http://localhost:5500/daytype').then(res => res.json())
+  ])
+  .then(([programs, dayTypes]) => {
+    const programList = document.querySelector('.program-list');
+    programList.innerHTML = ''; // clear existing content
 
-      data.forEach(item => {
-        const card = document.createElement('div');
-        card.classList.add('program-card');
-        card.innerHTML = `
-          <div class="card-left">
-            <div class="title-status">
-              <h3>PROGRAM NAME</h3>
-              <span class="status offline">OFFLINE</span>
-            </div>
-            <p class="schedule">TIME | ${item.DAY_TYPE}</p>
-            <p class="hosts">HOSTS</p>
+    programs.forEach(program => {
+      // Find the day type name for this program's DAY_TYPE_ID if applicable
+      // If your program table has a DAY_TYPE_ID column
+      const dayTypeObj = dayTypes.find(dt => dt.ID === program.DAY_TYPE_ID);
+      const dayTypeName = dayTypeObj ? dayTypeObj.DAY_TYPE : '';
+
+      const card = document.createElement('div');
+      card.classList.add('program-card');
+      card.innerHTML = `
+        <div class="card-left">
+          <div class="title-status">
+            <h3>${program.PROGRAM_NAME}</h3>
+            <span class="status ${program.STATUS?.toLowerCase() || 'offline'}">${program.STATUS || 'OFFLINE'}</span>
           </div>
-          <div class="card-right">
-            <p>Program description here</p>
-          </div>
-        `;
-        programList.appendChild(card);
-      });
-    })
-    .catch(err => console.error(err));
+          <p class="schedule">${program.START_TIME} – ${program.END_TIME} | ${dayTypeName}</p>
+          <p class="hosts">${program.HOSTS || 'TBA'}</p>
+        </div>
+        <div class="card-right">
+          <p>${program.DESCRIPTION || 'Program description here'}</p>
+        </div>
+      `;
+      programList.appendChild(card);
+    });
+  })
+  .catch(err => console.error(err));
 </script>
 </body>
 </html>
